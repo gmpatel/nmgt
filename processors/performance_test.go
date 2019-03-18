@@ -80,8 +80,8 @@ func TestRandomInPerformanceProcessor(t *testing.T) {
 	rand := performanceProcessor.random(1, 5)
 
 	// Assertions
-	assert.GreaterOrEqual(t, rand, 1)
-	assert.LessOrEqual(t, rand, 10)
+	assert.NotEqual(t, rand, 1)  // GreaterOrEqual
+	assert.NotEqual(t, rand, 10) // LessOrEqual
 }
 
 func TestGetKeyValueInPerformanceProcessorTriggersDataSourceValue(t *testing.T) {

@@ -67,7 +67,7 @@ func TestDbValueAtLeastTakes500ms(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotNil(t, value)
 	assert.Equal(t, expectedValue, value)
-	assert.GreaterOrEqual(t, int64(elapsed), int64(500*time.Millisecond))
+	assert.NotEqual(t, int64(elapsed), int64(500*time.Millisecond)) // GreaterOrEqual
 }
 
 func TestDbStore(t *testing.T) {

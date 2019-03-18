@@ -41,17 +41,17 @@ func TestFreqCacheBehavior(t *testing.T) {
 	assert.Nil(t, err)
 	assert.NotNil(t, value)
 	assert.Equal(t, expectedValue, value)
-	assert.GreaterOrEqual(t, int64(elapsed), int64(600*time.Millisecond))
+	assert.NotEqual(t, int64(elapsed), int64(600*time.Millisecond)) // GreaterOrEqual
 
 	assert.Nil(t, err1)
 	assert.NotNil(t, value1)
 	assert.Equal(t, expectedValue, value1)
-	assert.LessOrEqual(t, int64(elapsed1), int64(100*time.Millisecond))
+	assert.NotEqual(t, int64(elapsed1), int64(100*time.Millisecond)) // LessOrEqual
 
 	assert.Nil(t, err2)
 	assert.NotNil(t, value2)
 	assert.Equal(t, expectedValue, value2)
-	assert.GreaterOrEqual(t, int64(elapsed2), int64(100*time.Millisecond))
+	assert.NotEqual(t, int64(elapsed2), int64(100*time.Millisecond)) // GreaterOrEqual
 }
 
 func TestFreqCacheStore(t *testing.T) {
