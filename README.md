@@ -70,12 +70,14 @@ Complete `main()` to test your `DataSource` implementation; it must:
 
 # Solution setup & run instructions
 
-* **HAVE NOT** used any third party packages for the code exercise itself, but **HAVE USED** `testify/mock` and `testify/assert` packages for `unit-testing` as they are nice and the assertion statements of `testify/assert` are sensible!.
-
-* **PLEASE RUN** `install.sh` bash script from the root of the project to install dependent packages mentioned above. Command to run bash script is `bash install.sh`. 
-
 * **TO RUN PROGRAM** `go run main.go` to run the program. 
 
 * **TO RUN UNIT TESTS** `go test ./...` to run all unit test. Please make sure you have installed the third party test packages `testify/mock` and `testify/assert` before running the unit test.
 
 * **IT IS VERY IMPORTANT** to make sure that the location of my project code folder `nmgt` should be `$GOPATH/src/github.com/gmpatel/nmgt` for project to build and run successfully!
+
+* **HAVE NOT** used any third party packages for the code exercise itself, but **HAVE USED** `testify/mock` and `testify/assert` packages for `unit-testing` as they are nice and the assertion statements of `testify/assert` are sensible!.
+
+* **HAVE `DEP ENSURE`** third-party packages used for the test, but **IN CASE THERE IS A TROUBLE RUNNING THE `UNIT TESTS`** please install `testify/mock` and `testify/assert` packages for `unit-testing`. To install the packages you can follow the instructions from the next step to install those dependencies to your machine manually.
+
+* **PLEASE RUN** `install.sh` bash script from the root of the project to install dependent packages mentioned above. Command to run bash script is `bash install.sh`. 
